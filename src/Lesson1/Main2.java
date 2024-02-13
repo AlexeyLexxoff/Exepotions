@@ -15,8 +15,20 @@ package Lesson1;
 //        значение и покажет читаемый результат пользователю. Например, если вернулся -2,
 //        пользователю выведется сообщение: “Искомый элемент не найден
 
+import com.sun.source.util.TreeScanner;
+
+import java.util.Scanner;
+
 public class Main2 {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println(" Введите число для поиска в массиве ");
+        int number = input.nextInt();
+        int[] arrey = new int[]{1,2,3,4,5,6};
+        decoder(indexOfNumber(arrey,number));
+        input.close();
+
+
 
 
     }
@@ -51,7 +63,7 @@ public class Main2 {
                 System.out.println("место массива пришел null");
                 break;
             default:
-                System.out.printf("Индекс элементов равен%d",code);
+                System.out.printf("Индекс элементов равен %d ",code);
         }
 
     }
